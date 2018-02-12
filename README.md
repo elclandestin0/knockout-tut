@@ -1,2 +1,4 @@
-# knockout-tut
-playing around with knockout using cat clicker! 
+ud989-cat-clicker-ko-starter
+============================
+
+ud989-cat-clicker-ko-starter
