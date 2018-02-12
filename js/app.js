@@ -7,6 +7,21 @@ var ViewModel = function(){
       { name: "Charles"},
       { name: "Denise"}
   ]);
+  this.title = ko.computed(function(){
+    var title;
+    var clicks = this.clickCount();
+    if (clicks <= 10){
+      title = "Newborn";
+    }
+    else if (clicks <= 45 & clicks >10){
+      title = "Meow Knight"
+    }
+    else if (clicks >= 45 && clicks <=  50){
+      title = ""
+
+    }
+    return title;
+  }, this);
 
   this.incrementCounter = function() {
     this.clickCount(this.clickCount() + 1);
