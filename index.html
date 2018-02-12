@@ -7,11 +7,11 @@
 <body>
     <ul id="cat-list"></ul>
     <div id="cat">
-        <div data-bind="text: name"></div>
-        <div id="cat-count" data-bind="text: clickCount"></div>
-        <img id="cat-img" src="" alt="cute cat" data-bind="click: incrementCounter, attr: {src: imgSrc}">
-        <div data-bind="text: title"></div>
-        <ul data-bind="foreach: nicknames">
+        <div data-bind="text: currentCat().name"></div>
+        <div id="cat-count" data-bind="text: currentCat().clickCount"></div>
+        <img id="cat-img" src="" alt="cute cat" data-bind="click: incrementCounter, attr: {src: currentCat().imgSrc}">
+        <div data-bind="text: currentCat().title"></div>
+        <ul data-bind="foreach: currentCat().nicknames">
           <li data-bind="text: name"></li>
         </ul>
     </div>
